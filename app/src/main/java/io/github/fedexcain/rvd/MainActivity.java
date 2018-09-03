@@ -31,16 +31,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(io.example.michael.rvd.R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(io.example.michael.rvd.R.id.toolbar);
+        setContentView(io.github.fedexcain.rvd.R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(io.github.fedexcain.rvd.R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 1);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(io.example.michael.rvd.R.id.fab);
-        resultText = (TextView) findViewById(io.example.michael.rvd.R.id.result);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(io.github.fedexcain.rvd.R.id.fab);
+        resultText = (TextView) findViewById(io.github.fedexcain.rvd.R.id.result);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(io.example.michael.rvd.R.menu.menu_main, menu);
+        getMenuInflater().inflate(io.github.fedexcain.rvd.R.menu.menu_main, menu);
         return true;
     }
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == io.example.michael.rvd.R.id.action_settings) {
+        if (id == io.github.fedexcain.rvd.R.id.action_settings) {
             return true;
         }
 
@@ -93,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
 
         // get prompts.xml view
         LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
-        View promptView = layoutInflater.inflate(io.example.michael.rvd.R.layout.enter_link, null);
+        View promptView = layoutInflater.inflate(io.github.fedexcain.rvd.R.layout.enter_link, null);
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
         alertDialogBuilder.setView(promptView);
 
-        final EditText editText = (EditText) promptView.findViewById(io.example.michael.rvd.R.id.edittext);
+        final EditText editText = (EditText) promptView.findViewById(io.github.fedexcain.rvd.R.id.edittext);
         editText.setText(text);
         // setup a dialog window
         alertDialogBuilder.setCancelable(false)
